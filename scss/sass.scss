@@ -1,0 +1,357 @@
+// Este es un comentario para el scss
+// VARIABLES
+
+$colorbody: #c8d8e4;
+$colorheader: #52ab98;
+$colorfooter: #2b6777;
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Grid areas del body */
+header {
+    grid-area: cabecera;
+}
+
+main {
+    grid-area: principal;
+}
+
+footer {
+    grid-area: pie;
+}
+
+/* Grid areas del Nav */
+.homeNav {
+    grid-area: casa;
+}
+
+.enlacesNav {
+    grid-area: enlaces;
+}
+
+.search {
+    grid-area: busqueda;
+}
+
+/* Grid areas del Footer */
+.info {
+    grid-area: info;
+}
+
+.contacto {
+    grid-area: contacto;
+}
+
+.copyright {
+    grid-area: derechos;
+}
+
+/* Display del body */
+body {
+    display: grid;
+    grid-template-areas:
+    "cabecera"
+    "principal"
+    "pie";
+    grid-template-rows: auto auto auto;
+    background-color: $colorbody;
+}
+
+header {
+    background-color: $colorheader;
+    z-index: 1;
+}
+
+footer {
+    background-color: $colorfooter;
+}
+
+/* Anulo el padding y el margin de Bootstrap para que no rompa el nav */
+ul {
+    padding-left: 0px;
+    margin: 0px;
+}
+
+/* Alinea el contenido del main en el medio */
+main {
+    text-align: center;
+}
+
+/* Se acomoda el icono de home */
+.homeNav {
+    text-align: center;
+    vertical-align: auto;
+    /* Tamaño de la imagen del home */
+    img {
+        width: 100px;
+    }
+}
+
+/* Se acomoda los enlaces a las paginas */
+.enlacesNav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* Estilo del nav para que se vea como un boton de enlace */
+    a {
+        font-weight: bold;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+        background-color: $colorheader;
+        color: #ffffff;
+        /* Animacion de los botones cuando se pasa el mouse */
+        &:hover {
+            background-color: $colorfooter;
+            color: #f2f2f2;
+        }
+    }
+}
+
+/* Estilo de las listas dentro del nav */
+.navegacion {
+    ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    /* Para que el submenu tome como referencia el menu */
+    li {
+        position: relative;
+        /* Para ocultar los sub-menus */
+        ul {
+            display: none;
+            min-width: 90px;
+            /* Acomoda el sub menu a la derecha */
+            li ul {
+                left: 119px;
+                top: 0px;
+            }
+        }
+        /* Aparecen los submenus al pasar el mouse para un item de la lista */
+        &:hover > ul {
+            display: block;
+            position: absolute;
+        }
+    }   
+    }
+}
+
+/* Estetica del texto */
+.faq{
+    text-align: center;
+    background-image: url(../assets/Images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: azure;
+}
+
+/* Se acomodan los elementos del footer */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    ul {
+        list-style-type: none;
+        li {
+            h4 {
+                margin-top: 5px;
+                margin-bottom: 30px;
+            }
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .iconosFoot {
+        img {
+            margin-top: 10px;
+            width: 40px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* Transformacion que agranda las imagens de los productos */
+.animacion img:hover {
+    transform: scale(1.1, 1.1);    
+}
+
+/*-------------------------------
+            PRODUCTOS
+-------------------------------*/
+
+/* Disposicion de los productos */
+.filtrosProductos {
+    display: flex;
+    flex-direction: row;
+}
+
+/*-------------------------------
+            CONTACTO
+-------------------------------*/
+/* Distribucion de espacios entre el texto, mapa y el formulario */
+
+.paginaContacto {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-items: center;
+    div {
+        p {
+            text-align: start; 
+        }
+    }
+    form {
+        width: 80%;
+    }
+
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+    /* Display del nav */
+    .navegacion {
+        display: grid;
+        grid-template-areas:
+        "casa none busqueda"
+        "casa enlaces enlaces";
+        grid-template-rows: auto auto;
+        grid-template-columns: 15% 60% 25%;
+    }
+
+    /* Disposicion del Footer con Grids */
+    footer {
+        display: grid;
+        grid-template-areas:
+        "info contacto"
+        "derechos derechos";
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        .copyright {
+            text-align: center;
+        }
+    }
+}
+
+
+/* TABLET */
+
+@media (min-width: 481px) and (max-width: 1023px){
+
+    /* Grid del Nav en Tablet */
+    .navegacion {
+        display: grid;
+        grid-template-areas:
+        "casa enlaces enlaces";
+        grid-template-rows: auto;
+        grid-template-columns: 15% 60% 25%;
+        /* Acomoda el icono del home */
+        .homeNav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        /* Disposicion del Nav */
+        .enlacesNav {
+            background-color: $colorheader;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        /* Oculta la barra de busqueda */
+        .search {
+            display: none;
+        }
+    }
+
+    /* Disposicion del Footer con Grids */
+    footer {
+        display: grid;
+        grid-template-areas:
+        "info contacto"
+        "derechos derechos";
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(2, 1fr);
+        .copyright {
+            text-align: center;
+        }
+    }
+
+    /* Acomoda los filtros de los productos en columna */
+    .filtrosProductos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Acomoda la pagina de contacto en una columna */
+    .paginaContacto {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* SMARTPHONE */
+
+@media (max-width: 480px){
+
+    /* Grid del Nav en Phone */
+    .navegacion {
+        display: grid;
+        grid-template-areas:
+        "casa"
+        "enlaces";
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+        /* Oculta la barra de busqueda */
+        .search {
+            display: none;
+        }
+    }
+
+
+    /* Disposicion del Footer con Grids */
+    footer {
+        display: grid;
+        grid-template-areas:
+        "info"
+        "contacto"
+        "derechos";
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        .copyright {
+            text-align: center;
+        }
+    }
+
+
+    /* Acomoda los filtros de los productos en columna */
+    .filtrosProductos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Acomoda la pagina de contacto en una columna */
+    .paginaContacto {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

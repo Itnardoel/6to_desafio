@@ -1,0 +1,3 @@
+# Elementos que quiero ignorar para el repositorio remoto
+
+node_modules/
