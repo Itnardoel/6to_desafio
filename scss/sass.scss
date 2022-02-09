@@ -1,17 +1,12 @@
 // Este es un comentario para el scss
-// VARIABLES
+
+// Partials
+@import "partials/reset";
 
 $colorbody: #c8d8e4;
 $colorheader: #52ab98;
 $colorfooter: #2b6777;
 
-
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 /* Grid areas del body */
 header {
