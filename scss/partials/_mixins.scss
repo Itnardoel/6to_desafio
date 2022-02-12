@@ -1,0 +1,9 @@
+//Utilizo mixins para acomodar las imagenes del footer
+
+@mixin acomodoIconosFoot {
+    margin-top: 10px;
+    width: 40px;
+    padding: 5px;
+    margin-bottom: 10px;
+ }
+ 

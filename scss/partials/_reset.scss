@@ -1,6 +1,13 @@
+// Mapa para realizar el reset
+$reset: (
+    relleno: 0px,
+    margen: 0px,
+    tamaño_caja: border-box,
+);
+
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+    padding: map-get($reset, relleno);
+    margin: map-get($reset, margen);
+    box-sizing: map-get($reset, tamaño_caja);
     font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,0 +1,17 @@
+// Utilizo extend para reutilizar codigo
+
+/* Estetica del texto */
+.faq{
+    text-align: center;
+    background-image: url(../assets/Images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: azure;
+}
+
+// Acomoda el texto de la pagina faq a la izquierda
+.faq-left {
+    @extend .faq;
+    text-align: left;
+}

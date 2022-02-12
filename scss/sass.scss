@@ -2,6 +2,8 @@
 
 // Partials
 @import "partials/reset";
+@import "partials/mixins";
+@import "partials/extend";
 
 $colorbody: #c8d8e4;
 $colorheader: #52ab98;
@@ -139,16 +141,6 @@ main {
     }
 }
 
-/* Estetica del texto */
-.faq{
-    text-align: center;
-    background-image: url(../assets/Images/background.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: azure;
-}
-
 /* Se acomodan los elementos del footer */
 .info {
     display: flex;
@@ -173,10 +165,7 @@ main {
     }
     .iconosFoot {
         img {
-            margin-top: 10px;
-            width: 40px;
-            padding: 5px;
-            margin-bottom: 10px;
+            @include acomodoIconosFoot;
         }
     }
 }
