@@ -50,7 +50,9 @@ footer {
 /* Display del body */
 body {
   display: grid;
-  grid-template-areas: "cabecera" "principal" "pie";
+  grid-template-areas: "cabecera"
+ "principal"
+ "pie";
   grid-template-rows: auto auto auto;
   background-color: #c8d8e4; }
 
@@ -171,13 +173,15 @@ main {
   /* Display del nav */
   .navegacion {
     display: grid;
-    grid-template-areas: "casa none busqueda" "casa enlaces enlaces";
+    grid-template-areas: "casa none busqueda"
+ "casa enlaces enlaces";
     grid-template-rows: auto auto;
     grid-template-columns: 15% 60% 25%; }
   /* Disposicion del Footer con Grids */
   footer {
     display: grid;
-    grid-template-areas: "info contacto" "derechos derechos";
+    grid-template-areas: "info contacto"
+ "derechos derechos";
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr; }
     footer .copyright {
@@ -210,7 +214,8 @@ main {
   /* Disposicion del Footer con Grids */
   footer {
     display: grid;
-    grid-template-areas: "info contacto" "derechos derechos";
+    grid-template-areas: "info contacto"
+ "derechos derechos";
     grid-template-rows: auto auto;
     grid-template-columns: repeat(2, 1fr); }
     footer .copyright {
@@ -229,7 +234,8 @@ main {
   /* Grid del Nav en Phone */
   .navegacion {
     display: grid;
-    grid-template-areas: "casa" "enlaces";
+    grid-template-areas: "casa"
+ "enlaces";
     grid-template-rows: auto auto;
     grid-template-columns: 100%;
     /* Oculta la barra de busqueda */ }
@@ -238,7 +244,9 @@ main {
   /* Disposicion del Footer con Grids */
   footer {
     display: grid;
-    grid-template-areas: "info" "contacto" "derechos";
+    grid-template-areas: "info"
+ "contacto"
+ "derechos";
     grid-template-rows: auto auto;
     grid-template-columns: 1fr; }
     footer .copyright {
