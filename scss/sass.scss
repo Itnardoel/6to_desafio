@@ -185,6 +185,10 @@ main {
     flex-direction: row;
 }
 
+.imgProductos .card:hover {
+    transform: scale(1.05, 1.05);
+}
+
 /*-------------------------------
             CONTACTO
 -------------------------------*/
