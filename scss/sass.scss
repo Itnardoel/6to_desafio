@@ -187,6 +187,9 @@ main {
 
 .imgProductos .card:hover {
     transform: scale(1.05, 1.05);
+    img {
+        opacity: .8;
+    }
 }
 
 /*-------------------------------

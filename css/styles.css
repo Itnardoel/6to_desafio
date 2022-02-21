@@ -155,6 +155,8 @@ main {
 
 .imgProductos .card:hover {
   transform: scale(1.05, 1.05); }
+  .imgProductos .card:hover img {
+    opacity: .8; }
 
 /*-------------------------------
             CONTACTO
