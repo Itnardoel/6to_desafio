@@ -164,10 +164,24 @@ main {
 /* Distribucion de espacios entre el texto, mapa y el formulario */
 .paginaContacto {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 50% 50%;
   justify-items: center; }
   .paginaContacto div p {
     text-align: start; }
+  .paginaContacto div .mapa {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 75%; }
+    .paginaContacto div .mapa .mapa_responsive {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none; }
   .paginaContacto form {
     width: 80%; }
 
