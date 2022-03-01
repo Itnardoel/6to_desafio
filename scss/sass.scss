@@ -60,11 +60,13 @@ body {
     background-color: $colorbody;
 }
 
+/* Display del header */
 header {
     background-color: $colorheader;
     z-index: 1;
 }
 
+/* Display del footer */
 footer {
     background-color: $colorfooter;
 }
@@ -185,6 +187,7 @@ main {
     flex-direction: row;
 }
 
+/* Hover para la navegacion de los productos */
 .imgProductos .card:hover {
     transform: scale(1.05, 1.05);
     img {
